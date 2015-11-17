@@ -19,13 +19,25 @@
 
 #compare_favs.close()
 
-def compare_lists(name):
-	my_file = open(name)
-	name_list = my_file.readlines()
-	print name_list
-	my_file.close()
+#ef compare_lists(name):
+#my_file = open(name)
+#name_list = my_file.readlines()
+#print name_list
+#my_file.close()
 
-compare_lists("liz_fav_foods.txt")
-compare_lists("laura_fav_foods.txt")
+#compare_lists("liz_fav_foods.txt")
+#compare_lists("laura_fav_foods.txt")
 
+
+def compare_favs(person1, person2):
+	person_file1 = open(person1)
+	person_file2 = open(person2)
+	if (person_file1.readline(1) == person_file2.readline(1)):
+		print "Our faves are the same"
+	else:
+		print "Our faves are not the same"
+	person_file1.close()
+	person_file2.close()
+
+compare_favs ("liz_fav_foods.txt", "laura_fav_foods.txt")
 
